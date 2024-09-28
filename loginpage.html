@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LevelUp Institute</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #f06, #f9c);
+      color: #333;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+    }
+    
+    h1 {
+      color: #fff;
+      font-size: 3rem;
+      text-shadow: 2px 2px 4px #000;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .box {
+      background: #222;
+      padding: 25px;
+      border-radius: 10px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    input[type="email"], input[type="password"], input[type="text"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      font-size: 1rem;
+    }
+
+    .box button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(90deg, #f06, #f90);
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .box button:hover {
+      background: linear-gradient(90deg, #f90, #f06);
+    }
+
+    .login-link, .signup-link {
+      color: white;
+      margin-top: 15px;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .cta-button {
+      padding: 15px 30px;
+      background: #ff5722;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #ff784e;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .footer {
+      margin-top: 20px;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to LevelUp Institute</h1>
+  <p style="color: white; margin-bottom: 30px;">We offer IT technology and testing courses with 100% placement.</p>
+
+ 
+  <div class="container">
+
+  
+    <div id="loginBox" class="box">
+      <h2>Login Here</h2>
+      <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Enter email" required>
+        <input type="password" id="loginPassword" placeholder="Enter password" required>
+        <button type="button" onclick="login()">Login<a href="homepage.html"></a></button>
+      </form>
+      <span class="signup-link" onclick="showSignup()">Don't have an account? Sign up</span>
+    </div>
+
+   
+    <div id="signupBox" class="box hidden">
+      <h2>Sign Up Here</h2>
+      <form id="signupForm">
+        <input type="text" id="firstName" placeholder="First Name" required>
+        <input type="text" id="lastName" placeholder="Last Name" required>
+        <input type="email" id="signupEmail" placeholder="Enter email" required>
+        <input type="text" id="mobile" placeholder="Enter mobile number" required>
+        <input type="password" id="signupPassword" placeholder="Choose a password" required>
+        <input type="password" id="confirmPassword" placeholder="Re-enter password" required>
+        <button type="button" onclick="signup()">Sign Up</button>
+      </form>
+      <span class="login-link" onclick="showLogin()">Already have an account? Login</span>
+    </div>
+    <a href="homepage.html">login</a>
+
+
+  </div>
+
+  <div class="footer">
+    &copy; 2024 LevelUp Institute. All rights reserved.
+  </div>
+
+</body>
+</html>
